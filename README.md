@@ -10,8 +10,9 @@ Get docker/docker-compose on our raspberry ( raspberian? ), e.g. use [this tutor
 docker pull eugenmayer/openzwave-panel
 docker run --device=/dev/ttyAMA0:/dev/ttyAMA0 eugenmayer/openzwave-panel
 ```
-
 while /dev/ttyAMA0 should reflect your tty UART port on your host. This one should fit a raspberry on a rpi with [disabled bluetooth](https://github.com/EugenMayer/home-assistant-raspberry-zwave/wiki/RPI3.-Raspberry-PI-3---GPIO-Zwave-controller-**only**:-Disable-Bluetooth), see.
+
+But you better use a docker-compose file like you find in this repo, this makes things a lot easier, as usual.
 
 # Configuration
 
