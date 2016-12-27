@@ -1,0 +1,10 @@
+version: "2"
+services:
+  openzwave-panel:
+    build:
+      context: .
+    image: eugenmayer/openzwave-panel
+    ports:
+      - "8008:8008"
+    devices:
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
