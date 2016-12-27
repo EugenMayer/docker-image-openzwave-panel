@@ -13,6 +13,19 @@ docker run --device=/dev/ttyAMA0:/dev/ttyAMA0 eugenmayer/openzwave-panel
 
 while /dev/ttyAMA0 should reflect your tty UART port on your host. This one should fit a raspberry on a rpi with [disabled bluetooth](https://github.com/EugenMayer/home-assistant-raspberry-zwave/wiki/RPI3.-Raspberry-PI-3---GPIO-Zwave-controller-**only**:-Disable-Bluetooth), see.
 
+# Configuration
+
+You find the open-zway-contro-panel installation under `/opt/open-zwave-control-panel` with its configuration folder under 
+
+`/opt/open-zwave-control-panel/config`
+
+When you want to replace the options.xml, you would mount it from your host folder like
+
+
+`./configuration/options.xml:/opt/open-zwave-control-panel/config/options.xml`
+
+Just see our `docker-compose.yml` file here for an example, e.g. for activiation the NetworkKey
+
 # How its made
 We are based on the official raspbian [docker image](resin/rpi-raspbian:jessie).
 

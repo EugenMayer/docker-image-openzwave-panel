@@ -4,6 +4,8 @@ services:
     build:
       context: .
     image: eugenmayer/openzwave-panel
+    volumes:
+      - './example/options.xml:/opt/open-zwave-control-panel/config/options.xml'
     ports:
       - "8080:8080"
     devices:
