@@ -22,8 +22,11 @@ RUN apt-get install -y build-essential libmicrohttpd-dev libgnutls28-dev \
  && git clone https://github.com/OpenZwave/open-zwave-control-panel open-zwave-control-panel \
  && cd open-zwave-control-panel \
  && cp /tmp/Makefile . \
- && make
 
+# TOOD: merge that with the upper when we finalized the build
+# RUN make
+
+# RUN apt-get purge buld-essential
 
 COPY supervisor/supervisor_main.conf /etc/supervisor/conf.d/main.conf
 COPY supervisor/open-zwave.conf /etc/supervisor/conf.d/open-zwave.conf
