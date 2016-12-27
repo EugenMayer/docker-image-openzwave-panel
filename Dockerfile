@@ -22,7 +22,7 @@ COPY Makefile.PATCHED /tmp/Makefile.PATCHED
 RUN apt-get install -y build-essential libudev-dev libmicrohttpd-dev libgnutls28-dev \
  && wget ftp://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.19.tar.gz \
  && tar zxvf libmicrohttpd-0.9.19.tar.gz && mv libmicrohttpd-0.9.19 libmicrohttpd && rm libmicrohttpd-0.9.19.tar.gz \
- && cd libmicrohttpd && ./configure && make && make install
+ && cd libmicrohttpd && ./configure && make && make install \
  && ldconfig \
  && cd /opt \
  && git clone https://github.com/OpenZWave/open-zwave.git open-zwave \
@@ -31,8 +31,8 @@ RUN apt-get install -y build-essential libudev-dev libmicrohttpd-dev libgnutls28
  && git clone https://github.com/OpenZwave/open-zwave-control-panel open-zwave-control-panel \
  && cd open-zwave-control-panel \
  && ln -sd ../open-zwave/config \
- && mv /tmp/Makefile.PATCHED Makefile
- && make
+ && mv /tmp/Makefile.PATCHED Makefile \
+ && make \
  && apt-get purge buld-essential libudev-dev libmicrohttpd-dev libgnutls28-dev
 
 COPY supervisor/supervisor_main.conf /etc/supervisor/conf.d/main.conf
