@@ -40,6 +40,7 @@ COPY supervisor/open-zwave-panel.conf /etc/supervisor/conf.d/open-zwave-panel.co
 
 #ADD https://raw.githubusercontent.com/OpenZWave/open-zwave/master/cpp/tinyxml/tinyxml.h $HOME/open-zwave-control-panel/
 #ADD https://raw.githubusercontent.com/OpenZWave/open-zwave/master/cpp/tinyxml/tinystr.h $HOME/open-zwave-control-panel/
+EXPOSE 8080
 
 ENTRYPOINT ["/usr/bin/supervisord", "-c"]
 CMD ["/etc/supervisor/supervisord.conf"]
