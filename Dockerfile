@@ -33,7 +33,7 @@ RUN apt-get install -y build-essential libudev-dev libmicrohttpd-dev libgnutls28
  && ln -sd ../open-zwave/config \
  && mv /tmp/Makefile.PATCHED Makefile \
  && make \
- && apt-get purge buld-essential libudev-dev libmicrohttpd-dev libgnutls28-dev
+ && apt-get purge build-essential libudev-dev libmicrohttpd-dev libgnutls28-dev
 
 COPY supervisor/supervisor_main.conf /etc/supervisor/conf.d/main.conf
 COPY supervisor/open-zwave.conf /etc/supervisor/conf.d/open-zwave.conf
