@@ -21,7 +21,7 @@ RUN apt-get install -y build-essential libmicrohttpd-dev libgnutls28-dev \
  && ldconfig \
  && git clone https://github.com/OpenZwave/open-zwave-control-panel open-zwave-control-panel \
  && cd open-zwave-control-panel \
- && cp /tmp/Makefile .
+ && mv /tmp/Makefile .
 
 # TOOD: merge that with the upper when we finalized the build
 # RUN make
