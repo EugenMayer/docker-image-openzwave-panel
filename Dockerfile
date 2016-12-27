@@ -26,7 +26,7 @@ RUN apt-get install -y build-essential libudev-dev libmicrohttpd-dev libgnutls28
  && ldconfig \
  && cd /opt \
  && git clone https://github.com/OpenZWave/open-zwave.git open-zwave \
- && cd open-zwave && make
+ && cd open-zwave && make \
  && cd /opt \
  && git clone https://github.com/OpenZwave/open-zwave-control-panel open-zwave-control-panel \
  && cd open-zwave-control-panel \
