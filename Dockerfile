@@ -19,7 +19,7 @@ COPY Makefile.PATCHED /tmp/Makefile
 
 RUN apt-get install -y build-essential libmicrohttpd-dev libgnutls28-dev \
  && ldconfig \
- && git clone https://github.com/OpenZWave/open-zwave.git open-zwave
+ && git clone https://github.com/OpenZWave/open-zwave.git open-zwave \
  && git clone https://github.com/OpenZwave/open-zwave-control-panel open-zwave-control-panel \
  && cd open-zwave-control-panel \
  && mv /tmp/Makefile .
