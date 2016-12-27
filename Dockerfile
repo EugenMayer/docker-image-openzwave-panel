@@ -36,7 +36,7 @@ RUN apt-get install -y build-essential libudev-dev libmicrohttpd-dev libgnutls28
  && apt-get purge build-essential libudev-dev libmicrohttpd-dev libgnutls28-dev
 
 COPY supervisor/supervisor_main.conf /etc/supervisor/conf.d/main.conf
-COPY supervisor/open-zwave.conf /etc/supervisor/conf.d/open-zwave.conf
+COPY supervisor/open-zwave-panel.conf /etc/supervisor/conf.d/open-zwave-panel.conf
 
 #ADD https://raw.githubusercontent.com/OpenZWave/open-zwave/master/cpp/tinyxml/tinyxml.h $HOME/open-zwave-control-panel/
 #ADD https://raw.githubusercontent.com/OpenZWave/open-zwave/master/cpp/tinyxml/tinystr.h $HOME/open-zwave-control-panel/
